@@ -2,8 +2,11 @@
 A simple RESTful API Server
 
 The interface is a follows:
+
 *v1/users:
-```POST, JSON:
+
+```
+POST, JSON:
 {
 "userName":"",
 "password":""
@@ -11,10 +14,13 @@ The interface is a follows:
 Response:
 203 - Created
 "location" header:
-v1/users/<UUID of user>```
+v1/users/<UUID of user>
+```
 
 *v1/users/login
-```POST, JSON:
+
+```
+POST, JSON:
 {
 "uuid":<string>,
 "userName":<string>,
@@ -25,10 +31,13 @@ Where "uuid" or "userName" nedds to be set
 Response:
 200 - OK
 or
-401 - UNAUTHORIZED```
+401 - UNAUTHORIZED
+```
 
 *v1/users/getlogins
-```POST, JSON:
+
+```
+POST, JSON:
 {
 "numLogs":<numeric>,
 "credentials":{
@@ -42,7 +51,6 @@ Reponse:
 "user":<string>,
 logins:<string>[]
 }
-or 401 - UNAUTHORIZED```
-
-
+or 401 - UNAUTHORIZED
+```
 
