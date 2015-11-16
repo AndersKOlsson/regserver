@@ -5,10 +5,10 @@ package com.github.anderskolsson.regserver.exceptions;
  */
 public class UserCreationException extends DataStoreException {
 	private static final long serialVersionUID = 3159833237864229798L;
-	public UserCreationException(String message){
+	public UserCreationException(final String message){
 		super(message);
 	}
-	public UserCreationException(String message, Throwable cause){
+	public UserCreationException(final String message, final Throwable cause){
 		super(message, cause);
 	}
 }

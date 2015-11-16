@@ -5,10 +5,10 @@ package com.github.anderskolsson.regserver.exceptions;
  */
 public class UserLookupException extends DataStoreException {
 	private static final long serialVersionUID = -2078619095481498590L;
-	public UserLookupException(String message){
+	public UserLookupException(final String message){
 		super(message);
 	}
-	public UserLookupException(String message, Throwable cause){
+	public UserLookupException(final String message, final Throwable cause){
 		super(message, cause);
 	}
 }

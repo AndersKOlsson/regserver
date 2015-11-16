@@ -16,13 +16,13 @@ public class BcryptAuthentication implements Authentication {
 
 	/**{@inheritDoc}*/
 	@Override
-	public boolean verifyHash(String password, String hash) {
+	public boolean verifyHash(final String password, final String hash) {
 		return BCrypt.checkpw(password, hash);
 	}
 
 	/**{@inheritDoc}*/
 	@Override
-	public String hashPassword(String password) {
+	public String hashPassword(final String password) {
 		return BCrypt.hashpw(password, BCrypt.gensalt());
 	}
 }

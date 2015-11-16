@@ -43,12 +43,12 @@ public class RegServer {
         }
 	}
 	
-	public static void main(String args[]) throws Exception {
+	public static void main(final String args[]) throws Exception {
 		logger =  Logger.getLogger(RegServer.class.getName());
-		Authentication auth = new BcryptAuthentication();
-		DataStore store = new DerbyDataStore("default", auth.getHashLength());
-		InputDataValidator validator = new DefaultInputDataValidator();
-		UserResource res = new UserResource(store, auth, validator);
+		final Authentication auth = new BcryptAuthentication();
+		final DataStore store = new DerbyDataStore("default", auth.getHashLength());
+		final InputDataValidator validator = new DefaultInputDataValidator();
+		final UserResource res = new UserResource(store, auth, validator);
 		startServing(res);
 	}
 }

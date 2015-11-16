@@ -104,7 +104,7 @@ public class DerbyDataStore extends AbstractStore {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public User getUser(String userName) throws UserLookupException {
+	public User getUser(final String userName) throws UserLookupException {
 		try {
 			PreparedStatement selectUserStmt = this.conn
 					.prepareStatement("SELECT * FROM " + userTableName + " WHERE USER_NAME=?");
@@ -186,7 +186,7 @@ public class DerbyDataStore extends AbstractStore {
 	 * {@inheritDoc}
 	 */
 	@Override
-	public void registerLogin(User user) throws UserLookupException {
+	public void registerLogin(final User user) throws UserLookupException {
 		if (!isValidUserObj(user)) {
 			throw new UserLookupException("Wrong user/password format");
 		}

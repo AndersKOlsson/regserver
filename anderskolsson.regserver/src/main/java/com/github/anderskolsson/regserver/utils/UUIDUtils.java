@@ -9,14 +9,14 @@ import java.util.UUID;
  *
  */
 public class UUIDUtils {
-	public static UUID asUuid(byte[] bytes) {
+	public static UUID asUuid(final byte[] bytes) {
 		ByteBuffer bb = ByteBuffer.wrap(bytes);
 		long firstLong = bb.getLong();
 		long secondLong = bb.getLong();
 		return new UUID(firstLong, secondLong);
 	}
 
-	public static byte[] asBytes(UUID uuid) {
+	public static byte[] asBytes(final UUID uuid) {
 		ByteBuffer bb = ByteBuffer.wrap(new byte[16]);
 		bb.putLong(uuid.getMostSignificantBits());
 		bb.putLong(uuid.getLeastSignificantBits());

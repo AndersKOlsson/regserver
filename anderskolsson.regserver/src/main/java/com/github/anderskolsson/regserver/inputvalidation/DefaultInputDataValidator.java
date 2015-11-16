@@ -26,7 +26,7 @@ public class DefaultInputDataValidator implements InputDataValidator {
 	 * Checks that the password is at least {@value minPassLength} characters long. 
 	 */
 	@Override
-	public boolean checkPasswordStrength(String password) {
+	public boolean checkPasswordStrength(final String password) {
 		return (null != password && password.length() >= this.minPassword);
 	}
 
@@ -35,7 +35,7 @@ public class DefaultInputDataValidator implements InputDataValidator {
 	 * Checks that the username is following the expectations in min and max length, and characters
 	 */
 	@Override
-	public boolean checkUsername(String userName) {
+	public boolean checkUsername(final String userName) {
 		if(null == userName || userName.length() < this.minUsername || userName.length() > this.maxUsername){
 			return false;
 		}
